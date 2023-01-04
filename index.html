@@ -1,34 +1,3 @@
-
-    <script>
-
-      const disabledKeys = ["c", "C", "x", "u", "I"]; // keys that will be disabled
-
-      const showAlert = e => {
-
-        e.preventDefault(); // preventing its default behaviour
-
-        return alert("Sorry, you can't view or copy source codes this way!");
-
-      }
-
-      document.addEventListener("contextmenu", e => {
-
-        showAlert(e); // calling showAlert() function on mouse right click
-
-      });
-
-      document.addEventListener("keydown", e => {
-
-        // calling showAlert() function, if the pressed key matched to disabled keys
-
-        if(e.ctrlKey && disabledKeys.includes(e.key) || e.key === "F12") {
-
-          showAlert(e);
-
-        }
-
-      });
-
 <!doctype html>
 <html class="no-js" lang="en">
     
@@ -1253,6 +1222,43 @@
         <script src="plugins.js"></script>
         <script src="main.js"></script>
     </body>
+
+
+  <script>
+
+      const disabledKeys = ["c", "C", "x", "u", "I"]; // keys that will be disabled
+
+      const showAlert = e => {
+
+        e.preventDefault(); // preventing its default behaviour
+
+        return alert("Sorry, you can't view or copy source codes this way!");
+
+      }
+
+      document.addEventListener("contextmenu", e => {
+
+        showAlert(e); // calling showAlert() function on mouse right click
+
+      });
+
+      document.addEventListener("keydown", e => {
+
+        // calling showAlert() function, if the pressed key matched to disabled keys
+
+        if(e.ctrlKey && disabledKeys.includes(e.key) || e.key === "F12") {
+
+          showAlert(e);
+
+        }
+
+      });
+
+    </script>
+
+  </body>
+
+</html>
 
 <!-- Mirrored from themebeyond.com/html/suppke/suppke/index.html by HTTrack Website Copier/3.x [XR&CO'2017], Tue, 20 Dec 2022 12:45:03 GMT -->
 </html>
